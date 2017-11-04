@@ -1,3 +1,5 @@
+// Created by Oscar Avellan
+
 <html>
 <body>
 <?php
@@ -32,7 +34,7 @@ $sql_string = $sql_string." ;";
 //Checks if the query was successfull
 if(!mysqli_query($con,$sql_string)){
 		die( "Error: " . $sql_string . "<br>" . mysqli_error($con)); }
-	
+
 $result = mysqli_query($con,$sql_string);
 
 //Checks if the query returned rows
@@ -44,7 +46,7 @@ if(mysqli_num_rows($result) === 0){
 echo "<table border = '2'>";
 echo "<tr><td>Product Name</td></tr>";
 while( $row = mysqli_fetch_array($result) ){
-	
+
 	echo "<tr>";
 	echo "<td><a href='part2SpatulaDetails.php?idSpatula=".$row['idSpatula']."'>".$row['ProductName']."</a></td></tr>";
 }

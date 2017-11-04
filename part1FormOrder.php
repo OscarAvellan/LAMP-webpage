@@ -1,3 +1,5 @@
+// Created by Oscar Avellan
+
 <html>
 <head><title>Orders</title><h1>Orders</h1></head>
 <body>
@@ -38,7 +40,7 @@ while($row = mysqli_fetch_array($result)){
 	echo "<td align = 'center'>".$row['Price']."</td>";
 	echo "<td align = 'center'>".$row['QuantityInStock']."</td>";
 	echo "<td align = 'center'><input type = 'number' name = 'quantity[]' value = '0' min = '0' max = '".$row['QuantityInStock']."' ></td>";
-	echo "</tr>";	
+	echo "</tr>";
 }
 
 echo "</table>";
